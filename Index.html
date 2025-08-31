@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="RotationLocation" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <h2>Select Your Rotation</h2>
+   <h2>Select Your Spot</h2>
+ <div>
+    <button onclick="setRotation(1)">(5 spots)</button>
+    <button onclick="setRotation(2)">A(6 spots)</button>
+    <button onclick="setRotation(3)">B(6 spots)</button>
+    <button onclick="setRotation(4)">A(7 spots)</button>
+    <button onclick="setRotation(5)">B(7 spots)</button>
+    <button onclick="setRotation(6)">A(8 spots)</button>
+    <button onclick="setRotation(7)">B(8 spots)</button>
+    <button onclick="setRotation(8)">(9 spots)</button>
+  </div>
+  <select id="spotSelect"></select>
+  <br><br>
+
+  <label for="currentTime">Current Time:</label>
+  <input type="time" id="currentTime" value="09:00">
+
+  <br><br>
+  <button onclick="showSchedule()">Show My Schedule</button>
+
+  <h3>Your Upcoming Schedule:</h3>
+  <div id="schedule"></div>
+<script src="Logic.js"></script>
+</body>
+</html>
