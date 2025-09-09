@@ -16,6 +16,7 @@ document.getElementById("longdayIndicator").innerText = longday.toString();
 function isLongDay(){
  longday = !longday;
  document.getElementById("longdayIndicator").innerText = longday.toString();
+ showSchedule();
 }
     function setRotation(rotationNumber) {
       currentRotation = rotationNumber;
