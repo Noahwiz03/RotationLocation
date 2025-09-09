@@ -11,10 +11,11 @@
     };
 
     let currentRotation = 1;
-const longday = false;
+let longday = false;
 document.getElementById("longdayIndicator").innerText = longday.toString();
 function isLongDay(){
  longday = !longday;
+ document.getElementById("longdayIndicator").innerText = longday.toString();
 }
     function setRotation(rotationNumber) {
       currentRotation = rotationNumber;
