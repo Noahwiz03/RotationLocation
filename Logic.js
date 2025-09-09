@@ -11,7 +11,10 @@
     };
 
     let currentRotation = 1;
-
+let longday = false;
+function isLongDay(){
+ longday = !longday;
+}
     function setRotation(rotationNumber) {
       currentRotation = rotationNumber;
       const spotSelect = document.getElementById("spotSelect");
@@ -42,7 +45,9 @@ function showSchedule() {
   let firstSpot = true;
 
   // Determine cutoff dynamically
+
   const cutoff = new Date();
+  if(!longday){
   if (hours < 13) { // before 1 PM
     cutoff.setHours(13, 0, 0, 0);
   } else if (hours >= 13 && hours < 17) { // between 1 PM and 5 PM
@@ -50,7 +55,7 @@ function showSchedule() {
   } else { // after 5 PM
     cutoff.setHours(22, 0, 0, 0); // 10 PM
   }
-
+ } else{cutoff.setHours(19,0,0,0);}
   // Loop until cutoff
   while (date <= cutoff) {
     const pos = rotation[(spotIndex + i) % rotation.length];
