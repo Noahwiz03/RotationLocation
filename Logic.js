@@ -11,7 +11,7 @@
     };
 
     let currentRotation = 1;
-let longday = false;
+const longday = false;
 function isLongDay(){
  longday = !longday;
 }
